@@ -43,3 +43,6 @@ Thumbs.db
 
 # Docker
 docker/volumes/
+
+# Excluded until the gh token has the workflow OAuth scope (see docs/roadmap.md)
+.github/workflows/ci.yml
