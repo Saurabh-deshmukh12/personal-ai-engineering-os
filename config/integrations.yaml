@@ -1,0 +1,72 @@
+# Static integration registry. Read by `ai-os integrations list/status` and by
+# the capability registry for `ai-os help integrations`.
+#
+# `status: requires_configuration` / `unavailable` here means: the adapter
+# interface is reserved, but no working adapter has been implemented and
+# tested yet. No integration is mandatory for the core system to run.
+#
+# `enabled: false` is the hardcoded default for every integration until
+# Milestone 7 implements the enable/disable/test commands for real.
+
+integrations:
+  - name: graphiti
+    description: >-
+      Temporal knowledge graph provider for architecture history, relationship
+      tracking, and historical-vs-current fact retrieval.
+    version: "0.1.0"
+    status: unavailable
+    enabled: false
+    planned_milestone: 4
+    permissions: ["memory:read", "memory:write"]
+
+  - name: claude-mem
+    description: >-
+      Optional adapter for coding-session observations, session summaries, and
+      context recall. Must not duplicate canonical memory unnecessarily.
+    version: "0.1.0"
+    status: unavailable
+    enabled: false
+    planned_milestone: 7
+    permissions: ["memory:write"]
+
+  - name: headroom
+    description: >-
+      Context compression / token optimization for efficient agent handoffs.
+      Kept separate from permanent memory storage.
+    version: "0.1.0"
+    status: unavailable
+    enabled: false
+    planned_milestone: 7
+    permissions: []
+
+  - name: omniroute
+    description: >-
+      Multi-provider LLM routing for cost/latency optimization and fallback
+      models. Must never route confidential client context to an unapproved
+      provider.
+    version: "0.1.0"
+    status: unavailable
+    enabled: false
+    planned_milestone: 7
+    permissions: ["llm:route"]
+
+  - name: ponytail
+    description: >-
+      Optional engineering workflow/quality integration. Repository,
+      capabilities, and license have not yet been inspected -- do not treat
+      as implemented.
+    version: "0.0.0"
+    status: unavailable
+    enabled: false
+    planned_milestone: 7
+    permissions: []
+
+  - name: archify
+    description: >-
+      Placeholder adapter contract only. Exact URL/API was not provided; no
+      endpoints have been assumed or implemented.
+    version: "0.0.0"
+    status: unavailable
+    enabled: false
+    planned_milestone: 7
+    permissions: []

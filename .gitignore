@@ -1,0 +1,45 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+build/
+dist/
+.venv/
+venv/
+.mypy_cache/
+.pytest_cache/
+.ruff_cache/
+htmlcov/
+.coverage
+.coverage.*
+
+# Node (plugin/tooling pieces)
+node_modules/
+npm-debug.log*
+
+# Secrets / local env - never commit
+.env
+.env.*
+*.pem
+*.key
+secrets.yaml
+secrets.yml
+
+# Local memory / data - never committed to the central repo (see SECURITY.md)
+data/
+*.sqlite3
+*.db
+
+# User-specific config that should not be shared
+config/*.local.yaml
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+
+# Docker
+docker/volumes/
